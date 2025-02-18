@@ -6,7 +6,87 @@
     <link href="./output.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="bg-slate-900 text-emerald-50">
-    <h1 class="text-4xl text-center bg-violet-500 p-4 font-serif grid place-content-center h-screen w-screen">Hello Tailwind</h1>
+<body>
+    <main class="p-5">
+        <h1 class="text-lime-500 text-center text-2xl font-[500] mt-2.5">Tailwind CSS</h1>
+        <div class="w-full h-10 bg-violet-300 border-violet-600 rounded-lg my-4 p-2 border-2">
+            <p class="text-center font-mono font-extrabold">A Div</p>
+        </div>
+
+        <!-- layout -->
+        <div class=" fixed top-0 w-10 h-10 bg-red-400"></div>
+        <div class="flex justify-around space-x-6">
+            <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+            <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+            <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 mt-4">
+            <div class="h-12 bg-teal-600"></div>
+            <div class="h-12 bg-teal-600"></div>
+            <div class="h-12 bg-teal-600"></div>
+        </div>
+        <div class="mt-4">
+            <button class="bg-pink-400 rounded-lg px-4 py-2 text-white hover:bg-blue-600
+             focus:outline-none focus:ring focus:ring-blue-200 active:bg-blue-700">
+                Click Me
+            </button>
+        </div>
+        <div class="mt-4">
+            <ul class=" space-y-2 m-y-2">
+                <li class="bg-white p-2 first:bg-yellow-100 rounded-lg">Item 1</li>
+                <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200 rounded-sm">Item 2</li>
+                <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200 rounded-sm">Item 3</li>
+                <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200 rounded-sm">Item 4</li>
+                <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200 rounded-sm">Item 5</li>
+                <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200 rounded-sm">Item 6</li>
+            </ul>
+        </div>
+
+        <!-- darktheme -->
+        <div class=" card ">
+            <h3  class="text-base font-medium tracking-tight text-slate-900 dark:text-white">Sit amet consectetur adipisicing.</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-blue-100">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <button id="toggleDark"
+                class=" text-zinc-900 px-4 py-2 font-medium text-sm rounded-md mt-8 bg-blue-200  hover:bg-blue-300
+                focus:outline-none focus:ring focus:ring-blue-200 active:bg-blue-400"
+                >
+            Dark Mode</button>
+        </div>
+
+        <div>
+            <p class="text-[20px] text-[#57ccc6] p-[15px] m-[15] border-red-300 border-2">Lorem, ipsum dolor.</p>
+        </div>
+
+    </main>
 </body>
+
+<!-- <script type="text/javascript" defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggleDark = document.getElementById('toggleDark');
+        toggleDark.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+            alert("click!");
+        });
+    });
+</script> -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggleDark = document.getElementById('toggleDark');
+        const card = document.querySelector('.card');
+
+        toggleDark.addEventListener('click', function() {
+            if (card.classList.contains('dark')) {
+                card.classList.remove('dark'); // Remove dark mode
+            } else {
+                card.classList.add('dark'); // Enable dark mode
+            }
+        });
+    });
+</script>
+
 </html>
